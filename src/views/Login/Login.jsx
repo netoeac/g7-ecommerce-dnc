@@ -1,5 +1,6 @@
-import Logo from '../assets/images/dnc-logo.png'
-import '../index.css'
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/images/dnc-logo.png'
+import '../Login/login.css'
 
 export function Login(){
   return(
@@ -14,13 +15,13 @@ export function Login(){
     <form className='login-form'>
       <label className='label-form'>Digite seu CPF:</label>
       <div className='input-form'>
-        <input className='input-field' type='text' name='cpf' id='cpf' placeholder='000.000.000-00' required />
+        <input className='input-field' type='text' name='cpf' id='cpf' placeholder='000.000.000-00'  />
       </div>
       <label className='label-form'>Senha:</label>
       <div className='input-form'>
-        <input className='input-field' type='password' name='password' id='password' placeholder='***************' required />
+        <input className='input-field' type='password' name='password' id='password' placeholder='***************'  />
       </div>
-      <button className='btn-login'>Entrar</button>
+      <Link to={`/home`}><button className='btn-login'>Entrar</button></Link> 
     </form>
   </section>
     
