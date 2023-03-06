@@ -4,7 +4,7 @@ import '../Home/home.css'
 export function Home(){
   return(<>
   <section className="section-home">
-  <h1>Home Page</h1>
+  <h1>We have to develop the Home Page</h1>
   <button><Link to={`/`}>Voltar</Link></button>
 
 
