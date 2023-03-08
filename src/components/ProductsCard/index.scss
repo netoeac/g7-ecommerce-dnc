@@ -1,0 +1,10 @@
+@use "../../sass/variables" as *;
+
+.home__card{
+    background-color: $black-dnc;
+    display: grid;
+
+    &__--card{
+        border-radius: 5px solid;
+    }
+}

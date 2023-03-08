@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 import "./index.scss";
+import HeaderMenu from '../../components/HeaderMenu/HeaderMenu';
+import banner from '../../assets/images/banner_1.png'
+import ProductsCard from "../../components/ProductsCard/ProductsCard";
 
-const Home = () => {
+const Home = ({ data }) => {
   return (
-    <section className="section-home">
-      <h1>We have to develop the Home Page</h1>
-      <button><Link to={`/products`}>Ir para produtos</Link></button>
-      <button><Link to={`/`}>Voltar</Link></button>
-    </section>
+    <div className="home">
+      <HeaderMenu />
+      <img src={banner} alt="banner" />
+      
+      <div className="home__products">
+      {data.map((product) => (
+        <ProductsCard key={product.id} data={product} />
+      ))}
+      </div>
+    </div>
   )
 }
 export default Home
